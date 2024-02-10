@@ -1,18 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:baselineAligned="false">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:id="@+id/textInputLayout2"
+        android:layout_width="394dp"
+        android:layout_height="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/EditUserName"
             android:layout_width="match_parent"
-            android:layout_height="98dp"
-            android:hint="Type Here!" />
+            android:layout_height="match_parent"
+            android:baselineAligned="false"
+            android:hint="Your Name Here" />
+
     </com.google.android.material.textfield.TextInputLayout>
-</LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/buttonsGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+
+        <RadioButton
+            android:id="@+id/buttonMale"
+            android:layout_width="196dp"
+            android:layout_height="69dp"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/buttonFemale"
+            android:layout_width="196dp"
+            android:layout_height="match_parent"
+            android:text="Female" />
+    </RadioGroup>
+
+    <NumberPicker
+        android:id="@+id/EditUserHeightFeet"
+        android:layout_width="195dp"
+        android:layout_height="59dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <NumberPicker
+        android:id="@+id/EditUserHeightInch"
+        android:layout_width="195dp"
+        android:layout_height="59dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/EditUserHeightFeet"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="392dp"
+        android:layout_height="55dp"
+        android:text="Enter Your Height in Feet and Inches"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonsGender" />
+
+    <EditText
+        android:id="@+id/EditUserWeight"
+        android:layout_width="199dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="Your Weight (lbs)"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditUserHeightInch" />
+
+    <Button
+        android:id="@+id/buttonSleep1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SLEEP"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonDiet1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DIET"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonExercise1"
+        app:layout_constraintStart_toEndOf="@+id/buttonSleep1" />
+
+    <Button
+        android:id="@+id/buttonExercise1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EXERCISE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

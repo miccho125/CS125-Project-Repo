@@ -1,36 +1,59 @@
 package com.example.cs125app
 
 import android.os.Bundle
-import android.content.SharedPreferences
 import androidx.activity.ComponentActivity
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
+import android.widget.NumberPicker
+import android.widget.RadioGroup
 
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.cs125app.ui.theme.CS125AppTheme
 
 public class MainActivity : ComponentActivity() {
 
     lateinit var username: EditText;
+    lateinit var userHeightFt: NumberPicker;
+    lateinit var userHeightIn: NumberPicker;
+    lateinit var buttonGens: RadioGroup
+    lateinit var userWeight: EditText
+    lateinit var buttonSleep1: Button
+    lateinit var buttonDiet1: Button
+    lateinit var buttonExercise1: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         username = findViewById(R.id.EditUserName)
+        userHeightFt = findViewById(R.id.EditUserHeightFeet)
+        userHeightIn = findViewById(R.id.EditUserHeightInch)
+        buttonGens = findViewById(R.id.buttonsGender)
+        userWeight = findViewById(R.id.EditUserWeight)
+        buttonSleep1 = findViewById(R.id.buttonSleep1)
+        buttonDiet1 = findViewById(R.id.buttonDiet1)
+        buttonExercise1 = findViewById(R.id.buttonExercise1)
+
+        buttonSleep1.setOnClickListener{
+            setContentView(R.layout.activity_sleep)
+        }
+        buttonDiet1.setOnClickListener{
+            setContentView(R.layout.activity_diet)
+        }
+        buttonExercise1.setOnClickListener{
+            setContentView(R.layout.activity_exercise)
+        }
+
+        userHeightFt.setMaxValue(10)
+        userHeightFt.setMinValue(0)
+
+        userHeightIn.setMaxValue(11)
+        userHeightIn.setMinValue(0)
 
         val settings = getSharedPreferences("UserInfo", 0)
-        val n = settings.getString("username","")
-        username.setText(n)
+        username.setText(settings.getString("username",""))
+        buttonGens.check(settings.getInt("buttonGenders", -1))
+        userHeightFt.setValue(settings.getInt("userFeet", 5))
+        userHeightIn.setValue(settings.getInt("userInch", 0))
+        userWeight.setText(settings.getString("userWeight", ""))
     }
 
     override fun onStop()
@@ -40,9 +63,12 @@ public class MainActivity : ComponentActivity() {
         val edit = settings.edit()
 
         edit.putString("username",username.text.toString())
+        edit.putInt("buttonGenders", buttonGens.checkedRadioButtonId)
+        edit.putInt("userFeet", userHeightFt.value)
+        edit.putInt("userInch", userHeightIn.value)
+        edit.putString("userWeight", userWeight.text.toString())
         edit.apply()
 
     }
-
 }
 
