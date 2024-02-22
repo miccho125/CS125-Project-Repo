@@ -1,5 +1,6 @@
 package com.example.cs125app
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import android.widget.Button
@@ -33,13 +34,16 @@ public class MainActivity : ComponentActivity() {
         buttonExercise1 = findViewById(R.id.buttonExercise1)
 
         buttonSleep1.setOnClickListener{
-            setContentView(R.layout.activity_sleep)
+            startActivity(Intent(this, SleepActivity::class.java))
+            finish()
         }
         buttonDiet1.setOnClickListener{
-            setContentView(R.layout.activity_diet)
+            startActivity(Intent(this, DietActivity::class.java))
+            finish()
         }
         buttonExercise1.setOnClickListener{
-            setContentView(R.layout.activity_exercise)
+            startActivity(Intent(this, ExerciseActivity::class.java))
+            finish()
         }
 
         userHeightFt.setMaxValue(10)

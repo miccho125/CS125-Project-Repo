@@ -8,16 +8,16 @@
     android:orientation="vertical" >
 
     <Button
-        android:id="@+id/buttonDiet1"
+        android:id="@+id/buttonDiet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="DIET"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonExercise1"
-        app:layout_constraintStart_toEndOf="@+id/buttonHome1" />
+        app:layout_constraintEnd_toStartOf="@+id/buttonExercise"
+        app:layout_constraintStart_toEndOf="@+id/buttonHome" />
 
     <Button
-        android:id="@+id/buttonExercise1"
+        android:id="@+id/buttonExercise"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="EXERCISE"
@@ -25,7 +25,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/buttonHome1"
+        android:id="@+id/buttonHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Home"
