@@ -68,6 +68,7 @@ public class MainActivity : ComponentActivity() {
 
         edit.putString("username",username.text.toString())
         edit.putInt("buttonGenders", buttonGens.checkedRadioButtonId)
+        edit.putInt("userGender", buttonGens.indexOfChild(findViewById(buttonGens.getCheckedRadioButtonId())))
         edit.putInt("userFeet", userHeightFt.value)
         edit.putInt("userInch", userHeightIn.value)
         edit.putString("userWeight", userWeight.text.toString())
