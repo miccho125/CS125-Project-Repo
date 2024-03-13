@@ -5,54 +5,47 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#7A6E7380"
     android:baselineAligned="false">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
-        android:layout_width="394dp"
-        android:layout_height="90dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/EditUserName"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:baselineAligned="false"
-            android:hint="Your Name Here" />
-
-    </com.google.android.material.textfield.TextInputLayout>
 
     <RadioGroup
         android:id="@+id/buttonsGender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:textColor="#808080"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+        tools:layout_editor_absoluteY="90dp">
 
-        <RadioButton
-            android:id="@+id/buttonMale"
-            android:layout_width="196dp"
-            android:layout_height="69dp"
-            android:text="Male" />
-
-        <RadioButton
-            android:id="@+id/buttonFemale"
-            android:layout_width="196dp"
-            android:layout_height="match_parent"
-            android:text="Female" />
     </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="392dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="280dp"
+        android:text="Enter Your Height in Feet and Inches"
+        android:textAlignment="center"
+        android:textColor="#E8ECEE"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <NumberPicker
         android:id="@+id/EditUserHeightFeet"
         android:layout_width="195dp"
         android:layout_height="59dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:inputType="number"
+        android:touchscreenBlocksFocus="false"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -60,59 +53,130 @@
         android:id="@+id/EditUserHeightInch"
         android:layout_width="195dp"
         android:layout_height="59dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:inputType="number"
+        android:textColor="#808080"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/EditUserHeightFeet"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="392dp"
-        android:layout_height="55dp"
-        android:text="Enter Your Height in Feet and Inches"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonsGender" />
 
     <EditText
         android:id="@+id/EditUserWeight"
         android:layout_width="199dp"
         android:layout_height="48dp"
+        android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="Your Weight (lbs)"
         android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="#E8ECEE"
+        android:textColorHint="#E8ECEE"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EditUserHeightInch" />
 
     <Button
         android:id="@+id/buttonSleep1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SLEEP"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_width="400dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="#AE80BE"
+        android:text="Sleep Scheduling"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDiet1"
+        tools:layout_editor_absoluteX="6dp" />
 
     <Button
         android:id="@+id/buttonDiet1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DIET"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonExercise1"
-        app:layout_constraintStart_toEndOf="@+id/buttonSleep1" />
+        android:layout_width="400dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="530dp"
+        android:backgroundTint="#EF9EA3"
+        android:text="Diet Planning"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="6dp" />
 
     <Button
         android:id="@+id/buttonExercise1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="EXERCISE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_width="400dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#8BB7E5"
+        android:text="Exercise Planning"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDiet1"
+        tools:layout_editor_absoluteX="6dp" />
+
+    <RadioButton
+        android:id="@+id/buttonMale"
+        android:layout_width="160dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginEnd="199dp"
+        android:buttonTint="@color/teal_700"
+        android:text="Male"
+        android:textAlignment="textStart"
+        android:textColor="#E8ECEE"
+        android:textColorHint="#808080"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/buttonFemale"
+        android:layout_width="196dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="4dp"
+        android:buttonTint="@color/teal_700"
+        android:text="Female"
+        android:textAlignment="textStart"
+        android:textColor="#E8ECEE"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonMale"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/EditUserName"
+        android:layout_width="390dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="88dp"
+        android:backgroundTint="#E8ECEE"
+        android:baselineAligned="false"
+        android:drawableTint="#E8ECEE"
+        android:foregroundTint="#E8ECEE"
+        android:hint="Your Name Here"
+        android:textAlignment="center"
+        android:textColor="#E8ECEE"
+        android:textColorHint="#E8ECEE"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="420dp"
+        android:layout_height="50dp"
+        android:background="#778B90"
+        android:text="   Welcome, User"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#E8ECEE"
+        android:textSize="26sp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="2dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
