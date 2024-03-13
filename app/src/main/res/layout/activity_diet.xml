@@ -5,77 +5,115 @@
     android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#7A6E7380"
     android:orientation="vertical">
 
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="140dp"
-        android:layout_height="51dp"
-        android:text="CheckBox"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox3"
-        app:layout_constraintStart_toEndOf="@+id/checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar2" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="418dp"
+        android:layout_height="41dp"
+        android:background="#EF9EA3"
+        android:text="  Diet Planning"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#E8ECEE"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <Button
         android:id="@+id/buttonSleep"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="420dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="12dp"
+        android:background="#AE80BE"
         android:text="Sleep"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonExercise" />
 
     <Button
         android:id="@+id/buttonHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="420dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="485dp"
+        android:background="#778B90"
         android:text="Home"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonExercise"
-        app:layout_constraintStart_toEndOf="@+id/buttonSleep" />
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
         android:id="@+id/buttonExercise"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="420dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="12dp"
+        android:background="#8BB7E5"
         android:text="Exercise"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <ProgressBar
-        android:id="@+id/progressBar2"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="341dp"
-        android:layout_height="43dp"
-        android:max="100"
-        android:progress="25"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonHome" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="339dp"
         android:layout_height="51dp"
+        android:layout_marginTop="72dp"
         android:text="NULL"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="133dp"
-        android:layout_height="49dp"
-        android:text="CheckBox"
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="341dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="4dp"
+        android:max="100"
+        android:progress="25"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/checkBox2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="140dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="4dp"
+        android:text="CheckBox"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox3"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toEndOf="@+id/checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar2" />
 
     <CheckBox
         android:id="@+id/checkBox3"
         android:layout_width="151dp"
         android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:text="CheckBox"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/checkBox2" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="133dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:text="CheckBox"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/checkBox2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

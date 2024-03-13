@@ -9,6 +9,19 @@
     android:baselineAligned="false">
 
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="418dp"
+        android:layout_height="41dp"
+        android:background="#778B90"
+        android:text="  Welcome, User"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#E8ECEE"
+        android:textSize="26sp"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="0dp" />
+
     <RadioGroup
         android:id="@+id/buttonsGender"
         android:layout_width="wrap_content"
@@ -82,32 +95,44 @@
 
     <Button
         android:id="@+id/buttonSleep1"
-        android:layout_width="400dp"
+        android:layout_width="440dp"
         android:layout_height="70dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="70dp"
         android:backgroundTint="#AE80BE"
         android:text="Sleep Scheduling"
-        app:layout_constraintTop_toBottomOf="@+id/buttonDiet1"
-        tools:layout_editor_absoluteX="6dp" />
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDiet1" />
 
     <Button
         android:id="@+id/buttonDiet1"
-        android:layout_width="400dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="530dp"
+        android:layout_width="440dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="528dp"
         android:backgroundTint="#EF9EA3"
         android:text="Diet Planning"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="6dp" />
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonExercise1"
-        android:layout_width="400dp"
-        android:layout_height="70dp"
+        android:layout_width="440dp"
+        android:layout_height="69dp"
         android:backgroundTint="#8BB7E5"
         android:text="Exercise Planning"
-        app:layout_constraintTop_toBottomOf="@+id/buttonDiet1"
-        tools:layout_editor_absoluteX="6dp" />
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDiet1" />
 
     <RadioButton
         android:id="@+id/buttonMale"
@@ -163,19 +188,6 @@
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="420dp"
-        android:layout_height="50dp"
-        android:background="#778B90"
-        android:text="   Welcome, User"
-        android:textAlignment="textStart"
-        android:textAllCaps="false"
-        android:textColor="#E8ECEE"
-        android:textSize="26sp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="2dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

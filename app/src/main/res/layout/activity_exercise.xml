@@ -5,31 +5,62 @@
     android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#7A6E7380"
     android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="418dp"
+        android:layout_height="41dp"
+        android:background="#8BB7E5"
+        android:text="  Exercise Planning"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#E8ECEE"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <Button
         android:id="@+id/buttonSleep"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sleep"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_width="420dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="12dp"
+        android:background="#AE80BE"
+        android:text="Sleep Scheduling"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDiet" />
 
     <Button
         android:id="@+id/buttonHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="420dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="485dp"
+        android:background="#778B90"
         android:text="Home"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
         android:id="@+id/buttonDiet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Diet"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonHome"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toEndOf="@+id/buttonSleep" />
+        android:layout_width="420dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="12dp"
+        android:background="#EF9EA3"
+        android:text="Diet Planning"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonHome" />
 </androidx.constraintlayout.widget.ConstraintLayout>
