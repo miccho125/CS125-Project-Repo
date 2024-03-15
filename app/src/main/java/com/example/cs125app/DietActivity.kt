@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.ComponentActivity
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.NumberPicker
 import android.widget.ProgressBar
@@ -25,11 +26,15 @@ public class DietActivity : ComponentActivity() {
     lateinit var kCalBar: ProgressBar
     lateinit var waterBar: ProgressBar
     lateinit var addMealSwitch: Button
-    lateinit var CB6: Button
-    lateinit var CB7: Button
+    lateinit var CB0: CheckBox
+    lateinit var CB2: CheckBox
+    lateinit var CB3: CheckBox
+    lateinit var CB4: CheckBox
+    lateinit var CB6: CheckBox
+    lateinit var CB7: CheckBox
     lateinit var CB8: FloatingActionButton
-    lateinit var CB9: Button
-    lateinit var CB10: Button
+    lateinit var CB9: CheckBox
+    lateinit var CB10: CheckBox
     lateinit var CText: TextView
     lateinit var WText: TextView
 
@@ -48,6 +53,10 @@ public class DietActivity : ComponentActivity() {
             edit.putString("date", dateForm)
             edit.putInt("kCals", 0)
             edit.putInt("water", 0)
+            edit.putBoolean("GEaten", false)
+            edit.putBoolean("FEaten", false)
+            edit.putBoolean("VEaten", false)
+            edit.putBoolean("PEaten", false)
             edit.apply()
         }
 
@@ -63,6 +72,10 @@ public class DietActivity : ComponentActivity() {
         CB7 = findViewById(R.id.checkBox7)
         CB8 = findViewById(R.id.floatingActionButton1)
         CB9 = findViewById(R.id.checkBox9)
+        CB0 = findViewById(R.id.checkBox)
+        CB2 = findViewById(R.id.checkBox2)
+        CB3 = findViewById(R.id.checkBox3)
+        CB4 = findViewById(R.id.checkBox4)
         CB10 = findViewById(R.id.checkBox10)
         CText = findViewById(R.id.editTextNumber)
         CText.text = null
@@ -93,6 +106,10 @@ public class DietActivity : ComponentActivity() {
         }
 
         var kCals = 0.0
+        CB0.isChecked = settings.getBoolean("GEaten", false)
+        CB2.isChecked = settings.getBoolean("FEaten", false)
+        CB3.isChecked = settings.getBoolean("VEaten", false)
+        CB4.isChecked = settings.getBoolean("PEaten", false)
         var height = (settings.getInt("userFeet", 0) * 12) + settings.getInt("userInch", 0)
         val weight = settings.getString("userWeight", "")
         var w = 0
@@ -138,6 +155,32 @@ public class DietActivity : ComponentActivity() {
             val edit = settings.edit()
             edit.putInt("kCals", t2)
             edit.putInt("water", t3)
+
+            if(CB6.isChecked)
+            {
+                CB6.isChecked = false
+                CB3.isChecked = true
+                edit.putBoolean("VEaten", true)
+            }
+            if(CB7.isChecked)
+            {
+                CB7.isChecked = false
+                CB2.isChecked = true
+                edit.putBoolean("FEaten", true)
+            }
+            if(CB9.isChecked)
+            {
+                CB9.isChecked = false
+                CB4.isChecked = true
+                edit.putBoolean("PEaten", true)
+            }
+            if(CB10.isChecked)
+            {
+                CB10.isChecked = false
+                CB0.isChecked = true
+                edit.putBoolean("GEaten", true)
+            }
+
             edit.apply()
 
 

@@ -257,4 +257,14 @@
         app:layout_constraintHorizontal_bias="0.807"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="376dp"
+        android:layout_height="60dp"
+        android:text="KCal needs calculated from gender, age, height and weight.  Make sure to vary your diet with plenty of Grains, Proteins, Fruits and Vegetables!"
+        app:layout_constraintBottom_toTopOf="@+id/floatingActionButton1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kCalBar" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
