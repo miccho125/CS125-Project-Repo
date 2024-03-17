@@ -37,6 +37,7 @@ public class DietActivity : ComponentActivity() {
     lateinit var CB10: CheckBox
     lateinit var CText: TextView
     lateinit var WText: TextView
+    lateinit var buttonMealSearch: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -68,6 +69,7 @@ public class DietActivity : ComponentActivity() {
         kCalBar = findViewById(R.id.kCalBar)
         waterBar = findViewById(R.id.waterBar)
         addMealSwitch = findViewById(R.id.switch1)
+        buttonMealSearch = findViewById(R.id.button)
         CB6 = findViewById(R.id.checkBox6)
         CB7 = findViewById(R.id.checkBox7)
         CB8 = findViewById(R.id.floatingActionButton1)
@@ -198,6 +200,10 @@ public class DietActivity : ComponentActivity() {
         }
         buttonExercise.setOnClickListener{
             startActivity(Intent(this, ExerciseActivity::class.java))
+            finish()
+        }
+        buttonMealSearch.setOnClickListener{
+            startActivity(Intent(this, MealSearch::class.java))
             finish()
         }
 

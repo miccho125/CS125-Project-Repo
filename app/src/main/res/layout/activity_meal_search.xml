@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MealSearch">
+
+    <Button
+        android:id="@+id/buttonReturn"
+        android:layout_width="130dp"
+        android:layout_height="65dp"
+        android:text="Return"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonAddMeal"
+        android:layout_width="130dp"
+        android:layout_height="65dp"
+        android:text="AddMeal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cbPastries"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:text="Pastries"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <CheckBox
+        android:id="@+id/cbTea"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:text="Tea"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbCoffee" />
+
+    <CheckBox
+        android:id="@+id/cbCoffee"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:text="Coffee"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbPastries" />
+
+    <CheckBox
+        android:id="@+id/cbPancakes"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:text="Pancakes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbTea" />
+
+    <CheckBox
+        android:id="@+id/cbEggs"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:text="Eggs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbPancakes" />
+
+    <CheckBox
+        android:id="@+id/cbMeats"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:text="Meats"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbEggs" />
+
+    <CheckBox
+        android:id="@+id/cbSandwich"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:text="Sandwich"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <CheckBox
+        android:id="@+id/cbPizza"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="112dp"
+        android:text="Pizza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbBurger" />
+
+    <CheckBox
+        android:id="@+id/cbSoup"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="112dp"
+        android:text="Soup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbPizza" />
+
+    <CheckBox
+        android:id="@+id/cbSalad"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="112dp"
+        android:text="Salad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbSoup" />
+
+    <CheckBox
+        android:id="@+id/cbBurger"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="112dp"
+        android:text="Burger"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbSandwich" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="144dp"
+        android:layout_height="32dp"
+        android:text="Breakfast Items"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="176dp"
+        android:layout_height="32dp"
+        android:text="Lunch/Dinner Items"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cbBeef"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:text="Beef"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/cbSandwich"
+        app:layout_constraintTop_toBottomOf="@+id/cbTaco" />
+
+    <CheckBox
+        android:id="@+id/cbFish"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:text="Fish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbChicken" />
+
+    <CheckBox
+        android:id="@+id/cbDessert"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:text="Dessert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/cbPizza"
+        app:layout_constraintTop_toBottomOf="@+id/cbFish" />
+
+    <CheckBox
+        android:id="@+id/cbChicken"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:text="Chicken"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/cbBurger"
+        app:layout_constraintTop_toBottomOf="@+id/cbBeef" />
+
+    <CheckBox
+        android:id="@+id/cbTaco"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:text="Taco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <RadioGroup
+        android:id="@+id/buttonsViews"
+        android:layout_width="391dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/buttonReturn"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="129dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="123dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="121dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="RadioButton" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="124dp"
+        android:layout_height="61dp"
+        android:text="Calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonAddMeal"
+        app:layout_constraintStart_toEndOf="@+id/buttonReturn" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="129dp"
+        android:layout_height="40dp"
+        android:text="First Place"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbMeats" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="129dp"
+        android:layout_height="40dp"
+        android:text="Second Place"
+        app:layout_constraintEnd_toStartOf="@+id/textView10"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/cbMeats" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="129dp"
+        android:layout_height="40dp"
+        android:text="Third Place"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbMeats" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="129dp"
+        android:layout_height="129dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="130dp"
+        android:layout_height="129dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/imageView1"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="129dp"
+        android:layout_height="129dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textFirst"
+        android:layout_width="129dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView1" />
+
+    <TextView
+        android:id="@+id/textSecond"
+        android:layout_width="129dp"
+        android:layout_height="120dp"
+        app:layout_constraintEnd_toStartOf="@+id/textThird"
+        app:layout_constraintStart_toEndOf="@+id/textFirst"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/textThird"
+        android:layout_width="129dp"
+        android:layout_height="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

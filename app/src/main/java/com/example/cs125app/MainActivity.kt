@@ -27,7 +27,7 @@ public class MainActivity : ComponentActivity() {
         username = findViewById(R.id.EditUserName)
         userHeightFt = findViewById(R.id.EditUserHeightFeet)
         userHeightIn = findViewById(R.id.EditUserHeightInch)
-        buttonGens = findViewById(R.id.buttonsGender)
+        buttonGens = findViewById(R.id.buttonsLazy)
         userWeight = findViewById(R.id.EditUserWeight)
         buttonSleep1 = findViewById(R.id.buttonSleep1)
         buttonDiet1 = findViewById(R.id.buttonDiet1)
