@@ -19,11 +19,12 @@
         android:textAllCaps="false"
         android:textColor="#E8ECEE"
         android:textSize="26sp"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="-2dp"
         tools:layout_editor_absoluteY="0dp" />
 
     <RadioGroup
-        android:id="@+id/buttonsLazy"
+        android:id="@+id/buttonsGender"
         android:layout_width="409dp"
         android:layout_height="85dp"
         android:orientation="horizontal"
@@ -34,9 +35,10 @@
         app:layout_constraintTop_toBottomOf="@+id/EditUserName">
 
         <RadioButton
-            android:id="@+id/buttonLunch"
-            android:layout_width="192dp"
+            android:id="@+id/buttonMale"
+            android:layout_width="170dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="60dp"
             android:buttonTint="@color/teal_700"
             android:text="Male"
             android:textAlignment="textStart"
@@ -46,8 +48,8 @@
             android:textStyle="bold" />
 
         <RadioButton
-            android:id="@+id/buttonDinner"
-            android:layout_width="217dp"
+            android:id="@+id/buttonFemale"
+            android:layout_width="172dp"
             android:layout_height="85dp"
             android:buttonTint="@color/teal_700"
             android:text="Female"
